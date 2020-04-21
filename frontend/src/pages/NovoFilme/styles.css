@@ -1,0 +1,71 @@
+
+.profile-container{
+    width: 100%;
+    height: 100%;
+   
+}
+.register-container{
+    width: 100%;
+    max-width: 1220px;
+    height: 100%;
+    margin: 0 auto;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    width: 80%;
+   margin-top: 10%;
+    padding: 96px;
+    display: flex;
+    background: #f0f0f5;
+    box-shadow: 0 0 100px rgba(0,0,0,0.1);
+    border-radius: 8px;
+
+    align-items: center;
+    justify-content: center;
+
+}
+.content form{
+    width: 70%;
+}
+form h2{
+    font-size: 32px;
+    margin-bottom: 32px;
+    text-align: center;
+    color: #7159c1;
+}
+
+form input{
+    width: 100%;
+    height: 60px;
+    color: #333;
+    border: 1px solid #dcd6;
+    border-radius: 8px;
+    padding: 0 24px;
+    margin-bottom: 10px;
+}
+
+form select{
+   
+    font-family: Arial, Helvetica, sans-serif;
+    
+   background-size: 20px;
+   background-position: right;
+   
+  /*Posição da imagem do background*/
+   padding-right: 10px;
+   
+
+    width: 100%;
+    height: 60px;
+    color: #333;
+    border: 1px solid #dcd6;
+    border-radius: 8px;
+    padding: 0 24px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
