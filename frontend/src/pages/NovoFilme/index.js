@@ -9,7 +9,7 @@ import './styles.css';
 export default function Register(){
     
     const [categorias, setCategoria] = useState([]);    
-    const add;
+    
     const [nome, setNome] = useState([]);
     const [descricao, setDescricao] = useState([]);
     const [imagem, setImagem] = useState([]);

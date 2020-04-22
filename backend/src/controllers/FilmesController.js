@@ -33,12 +33,27 @@ module.exports = {
         
         return response.json(filmes);
     },
-    async teste(request, response){
-        const testando = await connection('filme')
-            .select('*')
+        async delete(request, response){
+            const { id } = request.params;
+            const usuario_id = request.headers.authorization;
 
-        return response.json(testando);
-    }
+            const filme = await connection('filme')
+                .where('id', id)
+                .select('idUsuario')
+                .first()
+           
+            if(filme.idUsuario != usuario_id){
+                console.log(usuario_id, id);
+                return response.status(401).json({error:'Operação não permitida'});
+            }
+
+            await connection('filme')
+                .where('id', id)
+                .delete()
+
+            return response.status(204).send();
+                
+        }
 
   
 }

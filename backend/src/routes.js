@@ -8,6 +8,7 @@ const routes = express.Router();
 //rotas dos filmes
 routes.post('/filmes/cadastro',FilmeController.create);
 routes.get('/filmes', FilmeController.listaFilmes);
+routes.delete('/filmes/:id', FilmeController.delete);
 
 
 //rotas das categorias
@@ -15,7 +16,7 @@ routes.post('/filmes/categorias', CategoriaController.create);
 routes.get('/filmes/cadastro', CategoriaController.listarCategorias);
 
 //rota login
-routes.post('/login', SessionController.create);
+routes.post('/', SessionController.create);
 
 
 

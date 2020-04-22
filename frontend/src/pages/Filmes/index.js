@@ -23,6 +23,21 @@ export default function Filmes(){
             setFilmes(response.data);
         })
     }, [usuarioId]);
+
+    async function handleDeleteFilme(id){
+        try{
+            await api.delete(`/filmes/${id}`, {
+                headers:{
+                    Authorization: usuarioId,
+                }
+            });
+            
+            setFilmes(filmes.filter(filme => filme.id != id));
+        }catch(err){
+            console.log(usuarioId, id);
+            alert('Erro ao deletetar filme, tente novamente');
+        }
+    }
     return(
         <div className="profile-container">
             <Header/>
@@ -34,7 +49,7 @@ export default function Filmes(){
                     <strong>{filme.nome}</strong>
                     <p>{filme.descricao}</p>
                     <p>{filme.nomeCategoria}</p>
-                    <button type="button">
+                    <button onClick={() => handleDeleteFilme(filme.id)} type="button">
                         <img src={deletar} />
                     </button>
                 </li>

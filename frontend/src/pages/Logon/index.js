@@ -15,7 +15,7 @@ export default function Logon(){
        
 
         try{
-            const response = await api.post('login', { nome, senha });
+            const response = await api.post('/', { nome, senha });
             localStorage.setItem('usuarioId', response.data.idUsuario);
             localStorage.setItem('usuarioNome', response.data.nomeUsuario);
 
@@ -39,7 +39,7 @@ export default function Logon(){
                         onChange={e => setNome(e.target.value)}
                     ></input>
                     <input 
-                        type="text"
+                        type="password"
                         placeholder="Senha"
                         value={senha}
                         onChange={e => setSenha(e.target.value)}

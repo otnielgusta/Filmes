@@ -10,7 +10,7 @@ export default function Routes(){
     return(
         <BrowserRouter>
             <Switch>
-                <Route path="/login" component={Logon}/>
+                <Route path="/" exact component={Logon}/>
                 <Route path="/filmes" exact component={Filmes}/>
                 <Route path="/filmes/cadastro" component={NovoFilme}/>
                 <Route path="/filmes/categorias" component={NovaCategoria}/>

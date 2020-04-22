@@ -5,7 +5,10 @@ import exit from '../../assets/exit.png';
 import './styles.css';
 
 
+
 export default function Header(){
+
+    
     const usuarioNome = localStorage.getItem('usuarioNome');
     return(          
             <header id="main-header">
@@ -14,7 +17,7 @@ export default function Header(){
                 <div className="acoes">
                     <Link to="/filmes/cadastro" className="comestilo">+ Filme</Link>
                     <Link to="/filmes/categorias" className="comestilo">+ Categoria</Link>
-                    <Link className="naomexe" to="/login"></Link>
+                    <Link className="naomexe" to="/"></Link>
                 </div>
 
             </header>
